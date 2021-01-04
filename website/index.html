@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Visualization of statistics in Romance of Three Kingdoms characters">
+    <title>Romance of Three Kingdoms Social Network</title>
+    <link rel="shortcut icon" href="images/sanguo.ico" type="image/x-icon">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script type='text/javascript' src='scripts/d3.min.js'></script>
+    <style>
+        body
+            { 
+                background: url(images/war3.png) no-repeat fixed top;
+                background-size: cover;
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><em>《三国演义》</em> 人物网络</h1>
+        <nav>
+            <div class="select period">
+                <label for="period">时代: </label>
+                <!-- <input type="text" id="period" name="period" list="suggest-period"> -->
+                <select id="period" name="period">
+                    <option value="all-periods" selected>全时代</option>
+                    <option value="yellow-turban-rebellion">黄巾起义</option>
+                    <option value="dong-zhuo-in-power">讨伐董卓</option>
+                    <option value="rivalry-of-warlords">群雄割据</option>
+                    <option value="battle-of-guandu">官渡之战</option>
+                    <option value="battle-of-red-cliffs">赤壁之战</option>
+                    <option value="liu-bei's-era">三国鼎立</option>
+                    <option value="northern-expeditions">诸葛北伐</option>
+                    <option value="post-zhuge-era">三国归晋</option>
+                </select>
+            </div>
+
+            <div id="profile-button" class='profile'>
+                <button type="button">介绍</button>
+            </div>
+
+            <div class="select people">
+                <label for="people">风云人物: </label>
+                <input type="text" id="people" name="people" list="suggest-people">
+                <datalist id="suggest-people">
+                <option>All People</option>
+                <optgroup label="Wei">
+                    <option>曹操</option>
+                </optgroup>
+                <optgroup label="Shu">
+                    <option>刘备</option>
+                </optgroup>
+                <optgroup label="Wu">
+                    <option>孙权</option>
+                </optgroup>  
+                <optgroup label="Jin">
+                    <option>司马懿</option>
+                </optgroup>  
+                <optgroup label="Other">
+                    <option>董卓</option>
+                </optgroup>
+                </datalist>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <div class="profile" id="profile">
+                <p id="all-periods">滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。<br>
+                白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+                <p id="yellow-turban-rebellion">大道废，有仁义。智慧出，有大伪。<br>六亲不和，有孝慈。国家昏乱，有忠臣。</p>
+                <p id="dong-zhuo-in-power">董贼潜怀废立图，汉家宗社委丘墟。满朝臣宰皆囊括，惟有丁公是丈夫。</p>
+                <p id="rivalry-of-warlords">王允定计诛逆党，李傕郭汜兴刀枪。四方盗贼如蚁聚，六合奸雄皆鹰扬。<br>
+                孙坚孙策起江左，袁绍袁术兴河梁。刘焉父子据巴蜀，刘表军旅屯荆襄。<br>
+                张邈张鲁霸南郑，马腾韩遂守西凉。陶谦张绣公孙瓒，各逞雄才占一方。</p>
+                <p id="battle-of-guandu">东临碣石，以观沧海。水何澹澹，山岛竦峙。树木丛生，百草丰茂。秋风萧瑟，洪波涌起。日月之行，若出其中。星汉灿烂，若出其里。幸甚至哉，歌以咏志。</p>
+                <p id="battle-of-red-cliffs">大江东去，浪淘尽，千古风流人物。故垒西边，人道是，三国周郎赤壁。乱石穿空，惊涛拍岸，卷起千堆雪。江山如画，一时多少豪杰。<br>
+                遥想公瑾当年，小乔初嫁了，雄姿英发。羽扇纶巾，谈笑间，樯橹灰飞烟灭。故国神游，多情应笑我，早生华发。人生如梦，一尊还酹江月。</p>
+                <p id="liu-bei's-era">至今白帝城，相望馀颓垣。后来刘豫州，建国图中原。<br>
+                三顾起卧龙，复此驻军屯。至今八阵图，历历迹犹存。</p>
+                <p id="northern-expeditions">丞相祠堂何处寻，锦官城外柏森森。映阶碧草自春色，隔叶黄鹂空好音。<br>
+                三顾频繁天下计，两朝开济老臣心。出师未捷身先死，长使英雄泪满襟！</p>
+                <p id="post-zhuge-era">姜维独凭气力高，九伐中原空劬劳。锺会邓艾分兵进，汉室江山尽属曹。<br>
+                丕睿芳髦才及奂，司马又将天下交。受禅台前云雾起，石头城下无波涛。<br>
+                陈留归命与安乐，王侯公爵从根苗。纷纷世事无穷尽，天数茫茫不可逃。鼎足三分已成梦，后人凭吊空牢骚。</p>
+            </div>
+        </article>
+        <aside></aside>
+        <graph></graph>
+    </main>
+
+    <footer>
+        测试中
+        <a href="stacked.html">堆叠图</a>
+        <a href="storyline.html">曲线图</a>
+    </footer>
+    <script src="scripts/relation.js"></script>
+    <script src="scripts/aside.js"></script>
+</body>
+
+</html>
