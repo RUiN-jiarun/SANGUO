@@ -1,0 +1,17 @@
+{
+    "place":[
+        {"placex": 592, "placey": 529}
+    ],
+    "people":[
+        {"name":"關羽", "posx":480, "posy":500, "r":40, "color":"green", "image":"guan-yu-(old).jpg"},
+        {"name":"曹仁", "posx":619, "posy":387, "r":45, "color":"blue", "image":"cao-ren.jpg"},
+        {"name":"於禁", "posx":555, "posy":447, "r":30, "color":"blue", "image":"yu-jin.jpg"},
+        {"name":"龐德", "posx":609, "posy":469, "r":30, "color":"blue", "image":"pang-de.jpg"},
+        {"name":"呂蒙", "posx":727, "posy":474, "r":35, "color":"red", "image":"lu-meng-(old).jpg"}
+    ],
+    "arrow":[
+        {"name":"關羽軍","end":[550,470],"rotate":80,"type":"arrow2"},
+        {"name":"呂蒙軍","end":[600,530],"rotate":-110,"type":"arrow1"},
+        {"name":"曹仁軍","end":[615,490],"rotate":165,"type":"arrow1"}
+    ]
+}

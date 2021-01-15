@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="{{url_for('static',filename='scripts/d3.v5.min.js')}}"></script>
+   <title>三國勢力更迭</title>
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/storyline.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/style.css')}}">
+   <link rel="shortcut icon" href="{{url_for('static',filename='images/sanguo.ico')}}" type="image/x-icon">
+   <style>
+    body{    background: url(../static/images/bg2.png) no-repeat fixed top; background-size: cover;}
+</style>
+</head>
+<body>
+    <header>
+        <h1>三國時期主要勢力更迭</h1>
+        <a href="{{url_for('index')}}"><img src="{{url_for('static', filename='images/back.png')}}"></a>
+        <nav>
+            <div class="select period">
+                <label for="period">時代: </label>
+                <!-- <input type="text" id="period" name="period" list="suggest-period"> -->
+                <select id="period" name="period">
+                    <option value="all-periods" selected>全時代</option>
+                    <option value="yellow-turban-rebellion">黃巾起義</option>
+                    <option value="dong-zhuo-in-power">討伐董卓</option>
+                    <option value="rivalry-of-warlords">群雄割據</option>
+                    <option value="battle-of-guandu">官渡之戰</option>
+                    <option value="battle-of-red-cliffs">赤壁之戰</option>
+                    <option value="liu-bei's-era">三國鼎立</option>
+                    <option value="northern-expeditions">諸葛北伐</option>
+                    <option value="post-zhuge-era">三國歸晉</option>
+                </select>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <graph></graph>
+    </main>
+    <footer>
+        制作：劉佳潤
+    </footer>
+    <!-- <svg width="1250" height="720"></svg> -->
+    <script src="{{url_for('static',filename='scripts/storyline.js')}}"></script>
+</body>
+</html>

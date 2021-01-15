@@ -1,0 +1,22 @@
+{
+    "place":[
+        {"placex": 627, "placey": 256}
+    ],
+    "people":[
+        {"name":"董卓", "posx":431, "posy":257, "r":50, "color":"black", "image":"dong-zhuo.jpg"},
+        {"name":"呂布", "posx":553, "posy":300, "r":30, "color":"black", "image":"lu-bu-(young).jpg"},
+        {"name":"袁紹", "posx":683, "posy":132, "r":40, "color":"#FFCC00", "image":"yuan-shao.jpg"},
+        {"name":"曹操", "posx":693, "posy":307, "r":30, "color":"blue", "image":"cao-cao-(young).jpg"},
+        {"name":"公孫瓚", "posx":733, "posy":83, "r":30, "color":"orange", "image":"gongsun-zan.jpg"},
+        {"name":"劉備", "posx":703, "posy":175, "r":20, "color":"green", "image":"liu-bei-(young).jpg"},
+        {"name":"關羽", "posx":748, "posy":200, "r":20, "color":"green", "image":"guan-yu-(young).jpg"},
+        {"name":"張飛", "posx":687, "posy":218, "r":20, "color":"green", "image":"zhang-fei-(young).jpg"},
+        {"name":"孫堅", "posx":763, "posy":322, "r":30, "color":"red", "image":"sun-jian.jpg"},
+        {"name":"袁術", "posx":592, "posy":391, "r":30, "color":"pink", "image":"yuan-shu.jpg"}
+    ],
+    "arrow":[
+        {"name":"董卓軍","end":[615,230],"rotate":75,"type":"arrow1"},
+        {"name":"關東軍","end":[615,290],"rotate":-30,"type":"arrow2"},
+        {"name":"關東軍","end":[640,260],"rotate":-160,"type":"arrow2"}
+    ]
+}

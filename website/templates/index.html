@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SANGUO</title>
+		<link rel="shortcut icon" href="{{url_for('static',filename='images/sanguo.ico')}}" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/title.css')}}">
+		<style>
+			body {
+                background: url(../static/images/war2.png) no-repeat  top; 
+    		    background-size: cover;}
+		</style>
+	</head>
+
+	<body>
+		<div class='title'>
+			<img src="{{url_for('static',filename='images/title.png')}}">
+			<div class='info'>
+				<p>三國歷史與人物交互可視化</p>
+				<p>溫馨提示：請將瀏覽器縮放到合適比例以獲取最佳觀感</p>
+			</div>
+		</div>
+		
+		<div class='flag' id='flag1'>
+			<a href="{{url_for('map')}}"><img src="{{url_for('static',filename='images/flag1.png')}}"></a>
+			<p>九州地圖</p>
+		</div>
+
+		<div class='flag' id='flag2' style='right:150px;'>
+			<a href="{{url_for('storyline')}}"><img src="{{url_for('static',filename='images/flag2.png')}}"></a>
+			<p>勢力更迭</p>
+		</div>
+
+		<div class='flag' id='flag3' style='top:350px'>
+			<a href="{{url_for('relation')}}"><img src="{{url_for('static',filename='images/flag3.png')}}"></a>
+			<p>人物網絡</p>
+		</div>
+
+		<div class='flag' id='flag3' style='right:150px; top:350px'>
+			<a href="https://github.com/RUiN-jiarun/SANGUO"><img src="{{url_for('static',filename='images/flag4.png')}}"></a>
+			<p>倉庫鏈接</p>
+		</div>
+
+
+    </body>
+	
+</html>

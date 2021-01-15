@@ -1,0 +1,17 @@
+{
+    "place":[
+        {"placex": 684, "placey": 242}
+    ],
+    "people":[
+        {"name":"曹操", "posx":596, "posy":276, "r":45, "color":"blue", "image":"cao-cao-(young).jpg"},
+
+        {"name":"劉備", "posx":733, "posy":237, "r":30, "color":"green", "image":"liu-bei-(young).jpg"},
+
+        {"name":"陶謙", "posx":788, "posy":298, "r":25, "color":"#CCFF99", "image":"tao-qian.jpg"},
+        {"name":"孔融", "posx":791, "posy":187, "r":25, "color":"#FF99CC", "image":"kong-rong.jpg"}
+    ],
+    "arrow":[
+        {"name":"曹操軍","end":[650,220],"rotate":75,"type":"arrow1"},
+        {"name":"徐州軍","end":[660,280],"rotate":-50,"type":"arrow2"}
+    ]
+}

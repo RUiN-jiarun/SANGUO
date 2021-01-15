@@ -1,0 +1,23 @@
+{
+    "place":[
+        {"placex": 274, "placey": 438},{"placex": 336, "placey": 289},{"placex": 406, "placey": 295}
+    ],
+    "people":[
+        {"name":"劉備", "posx":482, "posy":521, "r":45, "color":"green", "image":"liu-bei-(old).jpg"},
+        {"name":"庞统", "posx":365, "posy":538, "r":30, "color":"green", "image":"pang-tong.jpg"},
+        {"name":"張飛", "posx":505, "posy":409, "r":30, "color":"green", "image":"zhang-fei-(old).jpg"},
+        {"name":"黃忠", "posx":245, "posy":368, "r":30, "color":"green", "image":"huang-zhong-(old).jpg"},
+        {"name":"夏侯淵", "posx":466, "posy":226, "r":30, "color":"blue", "image":"xiahou-yuan.jpg"},
+        {"name":"張合", "posx":527, "posy":242, "r":30, "color":"blue", "image":"zhang-he-(old).jpg"},
+        {"name":"劉璋", "posx":179, "posy":482, "r":40, "color":"#996600", "image":"liu-zhang.jpg"},
+        {"name":"嚴顏", "posx":362, "posy":398, "r":30, "color":"#996600", "image":"yan-yan.jpg"}
+    ],
+    "arrow":[
+        {"name":"劉備軍","end":[285,450],"rotate":-45,"type":"arrow2"},
+        {"name":"張飛軍","end":[375,410],"rotate":-65,"type":"arrow2"},
+        {"name":"黃忠軍","end":[290,300],"rotate":30,"type":"arrow2"},
+        {"name":"劉備軍","end":[405,310],"rotate":20,"type":"arrow2"},
+        {"name":"夏侯淵軍","end":[350,290],"rotate":-100,"type":"arrow1"},
+        {"name":"張合軍","end":[420,310],"rotate":-80,"type":"arrow1"}
+    ]
+}

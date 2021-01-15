@@ -1,0 +1,17 @@
+{
+    "place":[
+        {"placex": 758, "placey": 322}
+    ],
+    "people":[
+        {"name":"曹操", "posx":596, "posy":276, "r":45, "color":"blue", "image":"cao-cao-(young).jpg"},
+        {"name":"劉備", "posx":619, "posy":331, "r":20, "color":"green", "image":"liu-bei-(young).jpg"},
+        {"name":"呂布", "posx":846, "posy":356, "r":30, "color":"grey", "image":"lu-bu-(old).jpg"},
+        {"name":"張遼", "posx":830, "posy":290, "r":25, "color":"grey", "image":"zhang-liao-(old).jpg"},
+        {"name":"陳宮", "posx":788, "posy":373, "r":25, "color":"grey", "image":"chen-gong.jpg"}
+    ],
+    "arrow":[
+        {"name":"曹操軍","end":[720,285],"rotate":110,"type":"arrow1"},
+        {"name":"劉備軍","end":[720,280],"rotate":80,"type":"arrow1"},
+        {"name":"呂布軍","end":[750,330],"rotate":-50,"type":"arrow2"}
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "place":[
+        {"placex": 500, "placey": 399}
+    ],
+    "people":[
+        {"name":"劉備", "posx":276, "posy":401, "r":60, "color":"green", "image":"liu-bei-(old).jpg"},
+        {"name":"陸遜", "posx":680, "posy":402, "r":40, "color":"red", "image":"lu-xun-(young).jpg"},
+        {"name":"孫權", "posx":805, "posy":510, "r":45, "color":"red", "image":"sun-quan-(young).jpg"}
+    ],
+    "arrow":[
+        {"name":"劉備軍","end":[480,370],"rotate":80,"type":"arrow2"},
+        {"name":"陸遜軍","end":[530,430],"rotate":-75,"type":"arrow1"}
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "place":[
+        {"placex": 547, "placey": 354}
+    ],
+    "people":[
+        {"name":"曹操", "posx":677, "posy":143, "r":70, "color":"blue", "image":"cao-cao-(young).jpg"},
+        {"name":"夏侯惇", "posx":542, "posy":219, "r":35, "color":"blue", "image":"xiahou-dun-(patch).jpg"},
+        {"name":"曹仁", "posx":680, "posy":266, "r":35, "color":"blue", "image":"cao-ren.jpg"},
+        {"name":"劉備", "posx":480, "posy":385, "r":40, "color":"green", "image":"liu-bei-(young).jpg"},
+        {"name":"劉表", "posx":551, "posy":451, "r":50, "color":"cyan", "image":"liu-biao.jpg"},
+        {"name":"徐庶", "posx":437, "posy":329, "r":35, "color":"green", "image":"xu-shu.jpg"},
+        {"name":"諸葛亮", "posx":420, "posy":395, "r":35, "color":"green", "image":"zhuge-liang-(young).jpg"}
+    ],
+    "arrow":[
+        {"name":"劉備軍","end":[600,230],"rotate":70,"type":"arrow2"},
+        {"name":"劉備軍","end":[530,360],"rotate":20,"type":"arrow2"},
+        {"name":"劉表軍","end":[530,390],"rotate":-45,"type":"arrow2"},
+        {"name":"曹操軍","end":[615,340],"rotate":165,"type":"arrow1"},
+        {"name":"曹操軍","end":[630,360],"rotate":-140,"type":"arrow1"}
+    ]
+}

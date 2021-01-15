@@ -1,0 +1,17 @@
+{
+    "place":[
+        {"placex": 622, "placey": 238}, {"placex":687,"placey":197}
+    ],
+    "people":[
+        {"name":"曹操", "posx":564, "posy":317, "r":45, "color":"blue", "image":"cao-cao-(young).jpg"},
+        {"name":"劉備", "posx":778, "posy":241, "r":25, "color":"green", "image":"liu-bei-(young).jpg"},
+        {"name":"袁紹", "posx":620, "posy":126, "r":70, "color":"#FFCC00", "image":"yuan-shao.jpg"}
+    ],
+    "arrow":[
+        {"name":"曹操軍","end":[600,230],"rotate":70,"type":"arrow1"},
+        {"name":"曹操軍","end":[680,220],"rotate":-60,"type":"arrow1"},
+        {"name":"劉備軍","end":[670,230],"rotate":-40,"type":"arrow2"},
+        {"name":"袁紹軍","end":[615,230],"rotate":165,"type":"arrow2"},
+        {"name":"袁紹軍","end":[640,250],"rotate":-140,"type":"arrow2"}
+    ]
+}

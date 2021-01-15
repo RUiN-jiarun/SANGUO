@@ -1,0 +1,13 @@
+{
+    "place":[
+        {"placex": 345, "placey": 271}
+    ],
+    "people":[
+        {"name":"司馬懿", "posx":387, "posy":206, "r":60, "color":"blue", "image":"sima-yi-(old).jpg"},
+        {"name":"諸葛亮", "posx":250, "posy":339, "r":60, "color":"green", "image":"zhuge-liang-(old).jpg"}
+    ],
+    "arrow":[
+        {"name":"魏軍","end":[400,260],"rotate":-120,"type":"arrow1"},
+        {"name":"蜀軍","end":[325,270],"rotate":0,"type":"arrow2"}
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "place":[
+        {"placex": 581, "placey": 467}, {"placex": 551, "placey": 397}
+    ],
+    "people":[
+        {"name":"曹操", "posx":677, "posy":143, "r":80, "color":"blue", "image":"cao-cao-(young).jpg"},
+        {"name":"劉備", "posx":440, "posy":456, "r":40, "color":"green", "image":"liu-bei-(young).jpg"},
+        {"name":"諸葛亮", "posx":420, "posy":395, "r":35, "color":"green", "image":"zhuge-liang-(young).jpg"},
+        {"name":"孫權", "posx":828, "posy":515, "r":45, "color":"red", "image":"sun-quan-(young).jpg"},
+        {"name":"周瑜", "posx":737, "posy":469, "r":35, "color":"red", "image":"zhou-yu-(young).jpg"},
+        {"name":"魯肅", "posx":730, "posy":397, "r":30, "color":"red", "image":"lu-su.jpg"},
+        {"name":"黃蓋", "posx":607, "posy":515, "r":35, "color":"red", "image":"huang-gai.jpg"}
+    ],
+    "arrow":[
+        {"name":"劉備軍","end":[500,370],"rotate":40,"type":"arrow2"},
+        {"name":"劉備軍","end":[550,420],"rotate":80,"type":"arrow2"},
+        {"name":"孫權軍","end":[550,480],"rotate":-45,"type":"arrow2"},
+        {"name":"孫權軍","end":[530,450],"rotate":-60,"type":"arrow2"},
+        {"name":"曹操軍","end":[615,340],"rotate":165,"type":"arrow1"},
+        {"name":"曹操軍","end":[630,415],"rotate":-140,"type":"arrow1"}
+    ]
+}

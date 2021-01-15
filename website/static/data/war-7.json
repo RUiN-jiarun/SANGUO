@@ -1,0 +1,17 @@
+{
+    "place":[
+        {"placex": 804, "placey": 382},{"placex": 900, "placey": 414},{"placex": 854, "placey": 473}
+    ],
+    "people":[
+        {"name":"袁術", "posx":603, "posy":363, "r":50, "color":"pink", "image":"yuan-shu.jpg"},
+        {"name":"孫策", "posx":673, "posy":410, "r":40, "color":"red", "image":"sun-ce-(young).jpg"},
+        {"name":"劉繇", "posx":802, "posy":340, "r":30, "color":"#006699", "image":"liu-yong.jpg"},
+        {"name":"王朗", "posx":899, "posy":509, "r":30, "color":"#CCCCCC", "image":"wang-lang.jpg"},
+        {"name":"嚴白虎", "posx":874, "posy":364, "r":30, "color":"#999933", "image":"yan-baihu.jpg"}
+    ],
+    "arrow":[
+        {"name":"孫策軍","end":[790,360],"rotate":86,"type":"arrow1"},
+        {"name":"孫策軍","end":[880,390],"rotate":95,"type":"arrow1"},
+        {"name":"孫策軍","end":[830,450],"rotate":100,"type":"arrow1"}
+    ]
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>三國地圖</title>
+		<link rel="shortcut icon" href="{{url_for('static',filename='images/sanguo.ico')}}" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/style.css')}}">
+		<!-- <link rel="stylesheet" type="text/css" href="../static/styles/style.css"> -->
+		<style>
+			body {background: url(../static/images/page.png) no-repeat  top; 
+    		background-size: cover;}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>三國時期地圖可視化</h1>
+			<a href="{{url_for('index')}}"><img src="{{url_for('static', filename='images/back.png')}}"></a>
+			<nav>
+				<div class="select period">
+					<label for="period">時代: </label>
+					<select id="period" name="period">
+						<option value="all-periods" selected>全時代-人物出身</option>
+						<option value="yellow-turban-rebellion">黃巾起義</option>
+						<option value="dong-zhuo-in-power">討伐董卓</option>
+						<option value="rivalry-of-warlords">群雄割據</option>
+						<option value="battle-of-guandu">官渡之戰</option>
+						<option value="battle-of-red-cliffs">赤壁之戰</option>
+						<option value="liu-bei's-era-1">三國鼎立-前</option>
+						<option value="liu-bei's-era-2">三國鼎立-後</option>
+						<option value="northern-expeditions">諸葛北伐</option>
+						<option value="post-zhuge-era">三國歸晉</option>
+					</select>
+				</div>
+	
+				<div id="profile-button" class='profile'>
+					<button type="button">介紹</button>
+				</div>
+
+				<div class="select war">
+					<label for="war">經典戰役: </label>
+					<!-- <input type="text" id="period" name="period" list="suggest-period"> -->
+					<select id="war" name="war">
+						<option value="none" selected>--</option>
+						<option value="hulaogaun">虎牢關之戰</option>
+						<option value="xuzhou">徐州之戰</option>
+						<option value="xiapi">下邳之戰</option>
+						<option value="wan">宛城之戰</option>
+						<option value="guandu">官渡之戰</option>
+						<option value="xinye">新野之戰</option>
+						<option value="jiandong">江東平定戰</option>
+						<option value="chibi">赤壁之戰</option>
+						<option value="xichuan">西川統一戰</option>
+						<option value="jingzhou">荊州之戰</option>
+						<option value="yiling">夷陵之戰</option>
+						<option value="tongguan">潼關之戰</option>
+						<option value="hefei">合肥之戰</option>
+						<option value="wuzhangyuan">五丈原之戰</option>
+						<option value="huainan">淮南之亂</option>
+					</select>
+				</div>
+	
+				
+			</nav>
+		</header>
+		<main>
+			<info>
+				<div class="profile" id="profile1">
+					<p id="all-periods">【滾滾長江東逝水，浪花淘盡英雄。是非成敗轉頭空，青山依舊在，幾度夕陽紅。<br>
+					白發漁樵江渚上，慣看秋月春風。一壺濁酒喜相逢，古今多少事，都付笑談中。】<br><br><br>
+					東漢末年，天下大亂。宦官當道，外戚攬權。<br>
+					在這兵戈四起，戰火紛飛的亂世，無數英雄豪傑輩出，譜寫出一段歷經一百余年的浩然史詩。<br><br><br>
+					英雄不問出身。在九州大地上誕生的豪傑們如星落雲布。您可以在左圖中看見三國時期一百多年的主要人物的出生地點。</p>
+					<p id="yellow-turban-rebellion">【大道廢，有仁義。智慧出，有大偽。<br>六親不和，有孝慈。國家昏亂，有忠臣。】<br><br><br>
+					冀州巨鹿人張角、張寶、張梁三兄弟不堪亂世渾濁，揭竿而起，是為「黃巾起義」。反抗的戰火燃遍中原，朝廷命臣大將軍何進、中軍校尉袁紹等人率領朝廷軍，與各路諸侯共平叛亂。<br>
+					曹操、劉備、孫堅、董卓等一時的豪傑，便在此次平叛中，逐漸展露了頭角，拉開了三國亂世的帷幕……</p>
+					<p id="dong-zhuo-in-power">【董賊潛懷廢立圖，漢家宗社委丘墟。滿朝臣宰皆囊括，惟有丁公是丈夫。】<br><br><br>
+					何進與袁紹密謀召涼州刺史董卓進京誅滅宦黨，未料想何進反被宦官謀殺。在京城一片混亂之時，董卓掌控了皇帝，把持了朝廷，開啟了慘無人道的血腥統治。<br>
+					在曹操、袁紹等人的號召下，集結了「十八路諸侯」的關東討董聯軍，殺向函谷關。董卓火燒洛陽，逃到長安。<br>
+					怎奈諸侯各懷異心，難成大器。浩浩蕩蕩的關東軍在刀槍爭鳴之中不歡而散，銷聲匿跡。</p>
+					<p id="rivalry-of-warlords">【王允定計誅逆黨，李傕郭汜興刀槍。四方盜賊如蟻聚，六合奸雄皆鷹揚。<br>
+					孫堅孫策起江左，袁紹袁術興河梁。劉焉父子據巴蜀，劉表軍旅屯荊襄。<br>
+					張邈張魯霸南鄭，馬騰韓遂守西涼。陶謙張繡公孫瓚，各逞雄才佔一方。】<br><br><br>
+					司徒王允施連環計，暴君董卓死在了猛將呂布手下。逆賊已誅，然而余燼未滅。董卓余黨李傕郭汜等人大鬧長安，天下昏暗。<br>
+					皇權旁落，軍閥勢起。揚州孫堅孫策平定了江東各路軍閥，冀州袁紹消滅了北平公孫瓚的勢力。益州劉焉劉璋，交州士燮，涼州馬騰，荊州劉表，幽州公孫度，各自割據一方。<br>
+					中原地帶，圍繞曹操、陶謙、呂布、劉備等人的戰火紛爭不斷。在長達數十年的戰火中，曹操消滅了呂布、陶謙、袁術，迎奉了天子，成為中原最強大的諸侯。</p>
+					<p id="battle-of-guandu">【東臨碣石，以觀滄海。水何澹澹，山島竦峙。樹木叢生，百草豐茂。秋風蕭瑟，洪波湧起。日月之行，若出其中。星漢燦爛，若出其裡。幸甚至哉，歌以詠志。】<br><br><br>
+					曹操奉天子以令不臣，把持朝綱，炙手可熱，與河北軍閥袁紹的關系越發不合，戰爭一觸即發。<br>
+					公元200年，曹操偷襲烏巢，大敗袁紹於官渡。在隨後的七年中，曹操平定了河北冀、幽、並、青四州，消滅了袁紹的三個兒子。<br>
+					至此，袁氏家族的勢力徹底退出了歷史舞台，曹操成為了北方最強大的諸侯。</p>
+					<p id="battle-of-red-cliffs">【大江東去，浪淘盡，千古風流人物。故壘西邊，人道是，三國周郎赤壁。亂石穿空，驚濤拍岸，卷起千堆雪。江山如畫，一時多少豪傑。<br>
+					遙想公瑾當年，小喬初嫁了，雄姿英發。羽扇綸巾，談笑間，檣櫓灰飛煙滅。故國神游，多情應笑我，早生華發。人生如夢，一尊還酹江月。】<br><br><br>
+					一統北方後，曹操的野心開始染指長江以南。寄人籬下的劉備在荊州劉表死後變得岌岌可危。<br>
+					在諸葛亮、魯肅、周瑜等人的努力下，劉備與江東的孫權集團結成了同盟。公元208年，孫劉聯軍於赤壁施火計大敗曹操。<br>
+					從此，曹魏的勢力再也沒能繼續南擴。而劉備也趁勢奪取了荊州四郡，從此在荊州立下了腳跟，開始了三分天下的雄心壯志。</p>
+					<p id="liu-bei's-era-1">【至今白帝城，相望餘頹垣。後來劉豫州，建國圖中原。<br>
+					三顧起臥龍，復此駐軍屯。至今八陣圖，歷歷跡猶存。】<br><br><br>
+					赤壁之戰後，曹操轉向對涼州馬騰、韓遂勢力的吞並。而劉備則在諸葛亮等人的建議下，進軍益州。<br>
+					馬騰被曹操殺死後，其子馬超與曹操在潼關展開拉鋸戰，最終不敵曹操，依附漢中張魯。曹魏勢力得以進軍涼州。<br>
+					劉備平定了西川，吸收了劉璋的勢力，並奪取了漢中。三足鼎立的局勢至此大致成形。</p>
+					<p id="liu-bei's-era-2">【至今白帝城，相望餘頹垣。後來劉豫州，建國圖中原。<br>
+					三顧起臥龍，復此駐軍屯。至今八陣圖，歷歷跡猶存。】<br><br><br>
+					蜀將關羽從曹魏勢力手中奪取了襄樊，然而卻遭到聯盟東吳的背叛。吳國都督呂蒙白衣渡江，設計殺死關羽，奪取了荊州。<br>
+					公元220年，曹操去世。其子曹丕篡奪皇位，自立魏文帝。公元221年，劉備在成都自立為帝，後世稱為蜀漢。<br>
+					同年，復仇心切的劉備帥軍討伐孫權，被都督陸遜大敗於夷陵，敗退於永安。兩年後，劉備去世，托孤於丞相諸葛亮，其子劉禪即位。<br>
+					另一方面，江東孫權在兩股勢力的裹挾下，不斷尋求新的突破。在吸收了交州士家的勢力，平定了荊州和江北的戰亂後，於公元229年稱帝。是為吳國。
+					</p>
+					<p id="northern-expeditions">【丞相祠堂何處尋，錦官城外柏森森。映階碧草自春色，隔葉黃鸝空好音。<br>
+					三顧頻繁天下計，兩朝開濟老臣心。出師未捷身先死，長使英雄淚滿襟！】<br><br><br>
+					吳蜀重修同盟後，諸葛亮定下了北伐中原的計劃。與魏國權臣司馬懿斗爭斗勇，六出祁山，試圖興復漢室。<br>
+					同時，蜀漢平定了南中孟獲等人的叛亂，穩定了益州的根基。<br>
+					然而功敗垂成，六出祁山無果而終，星落五丈原。魏國司馬懿徹底掃除了障礙，在統一了遼東後，司馬家族成為了魏國的實際掌控者。</p>
+					<p id="post-zhuge-era">【姜維獨憑氣力高，九伐中原空劬勞。鍾會鄧艾分兵進，漢室江山盡屬曹。<br>
+					丕睿芳髦才及奐，司馬又將天下交。受禪台前雲霧起，石頭城下無波濤。<br>
+					陳留歸命與安樂，王侯公爵從根苗。紛紛世事無窮盡，天數茫茫不可逃。鼎足三分已成夢，後人憑吊空牢騷。】<br><br><br>
+					司馬懿設計誅殺了曹魏權臣大將軍曹爽，為司馬家族的掌權掃清了最後的障礙。司馬懿死後，其子司馬師、司馬昭掌控了魏國。<br>
+					公元256、257年，魏將毋丘儉、諸葛誕先後於淮南兵變反抗司馬氏，然而都以失敗告終。<br>
+					蜀將姜維九伐中原未果。魏將鄧艾於公元263年滅掉了蜀漢政權。<br>
+					公元265年，司馬昭之子司馬炎逼魏帝曹奐退位，建立晉朝。280年，晉朝大將羊祜滅掉東吳。<br>
+					至此，天下三分皆歸晉。然而這一時的統一，卻也只是歷史上的曇花一現……</p>
+				</div>
+				<div class="profile" id="profile2">
+					<p id="hulaogaun">虎牢關之戰<br><br><br>
+						時間：公元190年<br>事實性：虛構<br><br>
+						董卓軍 對 關東聯軍（曹操、袁紹、公孫瓚、孫堅、袁術等）<br>
+						結果：董卓戰敗，逃離洛陽<br>
+						關鍵詞：溫酒斬華雄 三英戰呂布<br>
+						意義：討董聯軍的重大勝利</p>
+					<p id="xuzhou">徐州之戰<br><br><br>
+						時間：公元193-194年<br>事實性：史实<br><br>
+						曹操軍 對 陶謙、孔融、劉備聯軍<br>
+						結果：曹操攻陷彭城，因呂布偷襲兗州而撤軍<br>
+						關鍵詞：三讓徐州 血洗彭城<br>
+						意義：曹操進軍中原的重要一步，劉備的第一片根據地，呂布的崛起機會</p>
+					<p id="xiapi">下邳之戰<br><br><br>
+						時間：公元198年<br>事實性：史實<br><br>
+						曹操、劉備聯軍 對 呂布軍<br>
+						結果：呂布集團覆滅，呂布被殺<br>
+						關鍵詞：陳宮 張遼 白門樓呂布殞命<br>
+						意義：曹操掌控中原的重要一步，呂布勢力的徹底覆滅</p>
+					<p id="wan">宛城之戰<br><br><br>
+						時間：公元197年<br>事實性：史實<br><br>
+						曹操軍 對 張繡軍<br>
+						結果：曹操敗逃，長子曹昂、侄子曹安民、大將典韋被殺<br>
+						關鍵詞：戰宛城 古之惡來 賈詡<br>
+						意義：曹操稱霸之路上遭遇的巨大挫折</p>
+					<p id="guandu">官渡之戰<br><br><br>
+						時間：公元199-200年<br>事實性：史實<br><br>
+						曹操軍 對 袁紹、劉備聯軍<br>
+						結果：曹軍偷襲烏巢，以少勝多大敗袁紹<br>
+						關鍵詞：白馬之戰 霹靂車 許攸 偷襲烏巢<br>
+						意義：曹操一統北方的堅實基礎，袁紹勢力衰落的開始</p>
+					<p id="xinye">新野之戰<br><br><br>
+						時間：公元202-203年<br>事實性：史實+虛構<br><br>
+						曹操軍 對 劉備、劉表聯軍<br>
+						結果：雙方各有勝負<br>
+						關鍵詞：徐庶戰曹仁 三顧茅廬 火燒博望坡 火燒新野 攜民渡江<br>
+						意義：劉備在荊州劉表的支持下暫且擁有了根據地，開始了自身勢力的發展</p>
+					<p id="jiandong">江東平定戰<br><br><br>
+						時間：公元195-196年<br>事實性：史實<br><br>
+						孫策軍 對 劉繇軍、嚴白虎軍、王朗軍<br>
+						結果：孫策勝，一統江東<br>
+						關鍵詞：小霸王 <br>
+						意義：孫家勢力消滅了揚州割據的諸侯，脫離了袁術的控制，打下了江東基礎。</p>
+					<p id="chibi">赤壁之戰<br><br><br>
+						時間：公元208年<br>事實性：史實+虛構<br><br>
+						曹操軍 對 孫權、劉備聯軍<br>
+						結果：孫劉聯軍以火計，以少勝多，曹操敗逃，軍隊死傷大數<br>
+						關鍵詞：周瑜 魯肅 黃蓋 諸葛亮 舌戰群儒 草船借箭 借東風 苦肉計 火燒赤壁<br>
+						意義：孫劉聯盟的初步締結，劉備佔取荊州的第一步；孫吳勢力穩固生存環境；曹操勢力在攻略長江以南的徹底失敗。</p>
+					<p id="xichuan">西川統一戰<br><br><br>
+						時間：公元213-219年<br>事實性：史實<br><br>
+						劉備軍 對 劉璋軍、曹操軍<br>
+						結果：劉備統一益州，成功抵擋曹操的攻擊<br>
+						關鍵詞：龐統 江州之戰 成都之戰 定軍山之戰 陽平關之戰<br>
+						意義：劉備勢力獲得了穩固的發展地盤</p>
+					<p id="jingzhou">荊州之戰<br><br><br>
+						時間：公元219年<br>事實性：史實<br><br>
+						關羽軍 對 曹仁軍、呂蒙軍<br>
+						結果：關羽先攻下曹仁駐守的樊城，後為東吳呂蒙所破，兵敗被殺<br>
+						關鍵詞：襄樊之戰 水淹七軍 白衣渡江 敗走麥城 <br>
+						意義：孫劉聯盟破裂的開始，孫吳勢力奪取大部分荊州</p>
+					<p id="yiling">夷陵之戰<br><br><br>
+						時間：公元221-222年<br>事實性：史實+虚构<br><br>
+						劉備軍 對 陸遜軍<br>
+						結果：劉備軍幾乎全軍覆沒，退守永安，一年後劉備去世<br>
+						關鍵詞：火燒連營 永安托孤 八陣圖 <br>
+						意義：蜀漢勢力衰落的開始，吳蜀聯盟重新修好的轉機</p>
+					<p id="tongguan">潼關之戰<br><br><br>
+						時間：公元211年<br>事實性：史實<br><br>
+						曹操軍 對 馬超、韓遂聯軍<br>
+						結果：初戰曹軍失利，後曹操巧施離間計，擊敗關中聯軍<br>
+						關鍵詞：馬超戰許褚 割須棄袍 <br>
+						意義：曹操進軍關中、涼州的重要一步</p>
+					<p id="hefei">合肥之戰<br><br><br>
+						時間：公元214年<br>事實性：史實<br><br>
+						曹操軍（張遼、李典、樂進） 對 孫權軍<br>
+						結果：張遼大破吳軍，幾乎擒殺孫權<br>
+						關鍵詞：張遼止啼 逍遙津之戰 濡須之戰 <br>
+						意義：曹魏勢力成功守住合肥，阻止了東吳勢力向北擴張</p>
+					<p id="wuzhangyuan">五丈原之戰<br><br><br>
+						時間：公元234年<br>事實性：史實+虛構<br><br>
+						蜀漢軍（諸葛亮） 對 魏軍（司馬懿）<br>
+						結果：雙方對峙百余天，諸葛亮病逝於此<br>
+						關鍵詞：北原之戰 諸葛氣仲達 星落五丈原 死諸葛嚇退活司馬 誅魏延<br>
+						意義：蜀漢北伐戰爭以失敗告終，司馬氏的權勢進一步穩固</p>
+					<p id="huainan">淮南之亂<br><br><br>
+						時間：公元255258-年<br>事實性：史實<br><br>
+						朝廷軍（司馬師、司馬昭） 對 毋丘儉軍、諸葛誕軍<br>
+						結果：毋丘儉、諸葛誕先後叛亂反抗司馬氏，最終被鎮壓，司馬師也在兵變後發病而死<br>
+						關鍵詞：毋丘儉 文欽 文鴦 諸葛誕 <br>
+						意義：曹魏政權最後的反抗，自此之後天下盡歸司馬氏</p>
+				</div>
+			</info>
+			<graph></graph>
+
+		</main>
+		
+		<footer>
+			制作：劉佳潤
+		</footer>
+
+    </body>
+	
+
+
+
+	<script src="{{url_for('static',filename='scripts/d3.v5.min.js')}}"></script>
+	<!-- <script type="text/javascript" src="../static/data/map.json"></script> -->
+	<script src="{{url_for('static',filename='scripts/map.js')}}"></script>
+</html>

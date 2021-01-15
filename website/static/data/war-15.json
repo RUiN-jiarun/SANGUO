@@ -1,0 +1,17 @@
+{
+    "place":[
+        {"placex": 738, "placey": 367}
+    ],
+    "people":[
+        {"name":"司馬師", "posx":750, "posy":262, "r":60, "color":"purple", "image":"sima-shi.jpg"},
+        {"name":"司馬昭", "posx":589, "posy":323, "r":60, "color":"purple", "image":"sima-zhao.jpg"},
+        {"name":"毋丘儉", "posx":796, "posy":364, "r":30, "color":"blue", "image":"guanqiu-jian.jpg"},
+        {"name":"文欽", "posx":808, "posy":408, "r":30, "color":"blue", "image":"wen-qin.jpg"},
+        {"name":"諸葛誕", "posx":704, "posy":425, "r":30, "color":"red", "image":"zhuge-dan.jpg"}
+    ],
+    "arrow":[
+        {"name":"魏叛軍","end":[720,380],"rotate":12,"type":"arrow2"},
+        {"name":"魏叛軍","end":[740,400],"rotate":-25,"type":"arrow2"},
+        {"name":"司馬氏軍","end":[760,365],"rotate":135,"type":"arrow1"}
+    ]
+}

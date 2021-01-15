@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>三國人物網絡</title>
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/sanguo.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/style.css')}}">
+    <script type='text/javascript' src="{{url_for('static',filename='scripts/d3.min.js')}}"></script>
+    <style>
+        body{    background: url(../static/images/war4.png) no-repeat fixed top; background-size: cover;}
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>《三國演義》人物網絡</h1>
+        <a href="{{url_for('index')}}"><img src="{{url_for('static', filename='images/back.png')}}"></a>
+        <nav>
+            <div class="select period">
+                <label for="period">時代: </label>
+                <!-- <input type="text" id="period" name="period" list="suggest-period"> -->
+                <select id="period" name="period">
+                    <option value="all-periods" selected>全時代</option>
+                    <option value="yellow-turban-rebellion">黃巾起義</option>
+                    <option value="dong-zhuo-in-power">討伐董卓</option>
+                    <option value="rivalry-of-warlords">群雄割據</option>
+                    <option value="battle-of-guandu">官渡之戰</option>
+                    <option value="battle-of-red-cliffs">赤壁之戰</option>
+                    <option value="liu-bei's-era">三國鼎立</option>
+                    <option value="northern-expeditions">諸葛北伐</option>
+                    <option value="post-zhuge-era">三國歸晉</option>
+                </select>
+            </div>
+
+            <div id="profile-button" class='profile'>
+                <button type="button">引言</button>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <div class="profile" id="profile">
+                <p id="all-periods">滾滾長江東逝水，浪花淘盡英雄。是非成敗轉頭空，青山依舊在，幾度夕陽紅。<br>
+                白發漁樵江渚上，慣看秋月春風。一壺濁酒喜相逢，古今多少事，都付笑談中。</p>
+                <p id="yellow-turban-rebellion">大道廢，有仁義。智慧出，有大偽。<br>六親不和，有孝慈。國家昏亂，有忠臣。</p>
+                <p id="dong-zhuo-in-power">董賊潛懷廢立圖，漢家宗社委丘墟。滿朝臣宰皆囊括，惟有丁公是丈夫。</p>
+                <p id="rivalry-of-warlords">王允定計誅逆黨，李傕郭汜興刀槍。四方盜賊如蟻聚，六合奸雄皆鷹揚。<br>
+                孫堅孫策起江左，袁紹袁術興河梁。劉焉父子據巴蜀，劉表軍旅屯荊襄。<br>
+                張邈張魯霸南鄭，馬騰韓遂守西涼。陶謙張繡公孫瓚，各逞雄才佔一方。</p>
+                <p id="battle-of-guandu">東臨碣石，以觀滄海。水何澹澹，山島竦峙。樹木叢生，百草豐茂。秋風蕭瑟，洪波湧起。日月之行，若出其中。星漢燦爛，若出其裡。幸甚至哉，歌以詠志。</p>
+                <p id="battle-of-red-cliffs">大江東去，浪淘盡，千古風流人物。故壘西邊，人道是，三國周郎赤壁。亂石穿空，驚濤拍岸，卷起千堆雪。江山如畫，一時多少豪傑。<br>
+                遙想公瑾當年，小喬初嫁了，雄姿英發。羽扇綸巾，談笑間，檣櫓灰飛煙滅。故國神游，多情應笑我，早生華發。人生如夢，一尊還酹江月。</p>
+                <p id="liu-bei's-era">至今白帝城，相望餘頹垣。後來劉豫州，建國圖中原。<br>
+                三顧起臥龍，復此駐軍屯。至今八陣圖，歷歷跡猶存。</p>
+                <p id="northern-expeditions">丞相祠堂何處尋，錦官城外柏森森。映階碧草自春色，隔葉黃鸝空好音。<br>
+                三顧頻繁天下計，兩朝開濟老臣心。出師未捷身先死，長使英雄淚滿襟！</p>
+                <p id="post-zhuge-era">姜維獨憑氣力高，九伐中原空劬勞。鍾會鄧艾分兵進，漢室江山盡屬曹。<br>
+                丕睿芳髦才及奐，司馬又將天下交。受禪台前雲霧起，石頭城下無波濤。<br>
+                陳留歸命與安樂，王侯公爵從根苗。紛紛世事無窮盡，天數茫茫不可逃。鼎足三分已成夢，後人憑吊空牢騷。</p>
+            </div>
+        </article>
+        <aside></aside>
+        <graph></graph>
+    </main>
+
+    <footer>
+        制作：劉佳潤
+    </footer>
+    <script src="{{url_for('static',filename='scripts/relation.js')}}"></script>
+    <script src="{{url_for('static',filename='scripts/aside.js')}}"></script>
+</body>
+
+</html>

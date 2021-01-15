@@ -1,0 +1,15 @@
+{
+    "place":[
+        {"placex": 705, "placey": 401}
+    ],
+    "people":[
+        {"name":"張遼", "posx":735, "posy":312, "r":40, "color":"blue", "image":"zhang-liao-(old).jpg"},
+        {"name":"李典", "posx":661, "posy":342, "r":30, "color":"blue", "image":"li-dian.jpg"},
+        {"name":"樂進", "posx":675, "posy":283, "r":30, "color":"blue", "image":"yue-jin.jpg"},
+        {"name":"孫權", "posx":810, "posy":476, "r":60, "color":"red", "image":"sun-quan-(young).jpg"}
+    ],
+    "arrow":[
+        {"name":"張遼軍","end":[705,390],"rotate":165,"type":"arrow1"},
+        {"name":"孫權軍","end":[710,420],"rotate":-35,"type":"arrow2"}
+    ]
+}

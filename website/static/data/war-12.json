@@ -1,0 +1,15 @@
+{
+    "place":[
+        {"placex": 444, "placey": 266}
+    ],
+    "people":[
+        {"name":"曹操", "posx":611, "posy":145, "r":60, "color":"blue", "image":"cao-cao-(old).jpg"},
+        {"name":"許褚", "posx":544, "posy":235, "r":30, "color":"blue", "image":"xu-chu.jpg"},
+        {"name":"馬超", "posx":363, "posy":172, "r":35, "color":"#CCCC99", "image":"ma-chao-(old).jpg"},
+        {"name":"韓遂", "posx":241, "posy":219, "r":35, "color":"#CCCC99", "image":"han-sui.jpg"}
+    ],
+    "arrow":[
+        {"name":"曹操軍","end":[460,300],"rotate":-85,"type":"arrow1"},
+        {"name":"西涼軍","end":[430,250],"rotate":120,"type":"arrow2"}
+    ]
+}

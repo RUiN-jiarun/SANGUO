@@ -1,0 +1,14 @@
+{
+    "place":[
+        {"placex": 523, "placey": 310}
+    ],
+    "people":[
+        {"name":"曹操", "posx":628, "posy":260, "r":45, "color":"blue", "image":"cao-cao-(young).jpg"},
+        {"name":"典韦", "posx":596, "posy":328, "r":30, "color":"blue", "image":"dian-wei.jpg"},
+        {"name":"张绣", "posx":445, "posy":341, "r":40, "color":"#CC3366", "image":"zhang-xiu-(2).jpg"},
+        {"name":"贾诩", "posx":466, "posy":273, "r":35, "color":"#CC3366", "image":"jia-xu.jpg"}
+    ],
+    "arrow":[
+
+    ]
+}
