@@ -1,6 +1,7 @@
 # SANGUO
 Junior I - InfoVis
-网站已上线：[三国风云可视化网站](www.ruin.net.cn:8080)
+网站已上线：
+[三国风云可视化网站](http://www.ruin.net.cn:8080)
 
 ## 选题依据与预期成果
 
